@@ -1,0 +1,257 @@
+<!-- Code by Brave Coder - https://youtube.com/BraveCoder -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Text to Speech</title>
+</head>
+<body class="bg-gray-900">
+
+    <section class="text-gray-400 bg-gray-900 body-font relative">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white" onclick='responsiveVoice.speak("Text to Speech", "US English Male");'>Text to Speech</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base" onclick='responsiveVoice.speak("Lorem ipsum dolor sit amet consectetur adipisicing elit.", "US English Male");'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+              <div class="p-2 w-full">
+                <div class="relative">
+                  <label for="voice" class="leading-7 text-sm text-gray-400" onclick='responsiveVoice.speak("Languages & Voices", "US English Male");'>Languages & Voices</label>
+                  <select onfocus='responsiveVoice.speak("Select a voice", "US English Male");' id="voice" name="voice" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    <option value="" selected disabled hidden>--- Select a voice ---</option>
+                    <option value="UK English Female">UK English Female</option>
+                    <option value="UK English Male">UK English Male</option>
+                    <option value="US English Female">US English Female</option>
+                    <option value="US English Male">US English Male</option>
+                    <option value="Arabic Male">Arabic Male</option>
+                    <option value="Arabic Female">Arabic Female</option>
+                    <option value="Armenian Male">Armenian Male</option>
+                    <option value="Australian Female">Australian Female</option>
+                    <option value="Australian Male">Australian Male</option>
+                    <option value="Bangla Bangladesh Female">Bangla Bangladesh Female</option>
+                    <option value="Bangla Bangladesh Male">Bangla Bangladesh Male</option>
+                    <option value="Bangla India Female">Bangla India Female</option>
+                    <option value="Bangla India Male">Bangla India Male</option>
+                    <option value="Brazilian Portuguese Female">Brazilian Portuguese Female</option>
+                    <option value="Chinese Female">Chinese Female</option>
+                    <option value="Chinese Male">Chinese Male</option>
+                    <option value="Chinese (Hong Kong) Female">Chinese (Hong Kong) Female</option>
+                    <option value="Chinese (Hong Kong) Male">Chinese (Hong Kong) Male</option>
+                    <option value="Chinese Taiwan Female">Chinese Taiwan Female</option>
+                    <option value="Chinese Taiwan Male">Chinese Taiwan Male</option>
+                    <option value="Czech Female">Czech Female</option>
+                    <option value="Danish Female">Danish Female</option>
+                    <option value="Deutsch Female">Deutsch Female</option>
+                    <option value="Deutsch Male">Deutsch Male</option>
+                    <option value="Dutch Female">Dutch Female</option>
+                    <option value="Dutch Male">Dutch Male</option>
+                    <option value="Estonian Male">Estonian Male</option>
+                    <option value="Filipino Female">Filipino Female</option>
+                    <option value="Finnish Female">Finnish Female</option>
+                    <option value="French Female">French Female</option>
+                    <option value="French Male">French Male</option>
+                    <option value="French Canadian Female">French Canadian Female</option>
+                    <option value="French Canadian Male">French Canadian Male</option>
+                    <option value="Greek Female">Greek Female</option>
+                    <option value="Hindi Female">Hindi Female</option>
+                    <option value="Hindi Male">Hindi Male</option>
+                    <option value="Hungarian Female">Hungarian Female</option>
+                    <option value="Indonesian Female">Indonesian Female</option>
+                    <option value="Indonesian Male">Indonesian Male</option>
+                    <option value="Italian Female">Italian Female</option>
+                    <option value="Italian Male">Italian Male</option>
+                    <option value="Japanese Female">Japanese Female</option>
+                    <option value="Japanese Male">Japanese Male</option>
+                    <option value="Korean Female">Korean Female</option>
+                    <option value="Korean Male">Korean Male</option>
+                    <option value="Latin Male">Latin Male</option>
+                    <option value="Nepali">Nepali</option>
+                    <option value="Norwegian Female">Norwegian Female</option>
+                    <option value="Norwegian Male">Norwegian Male</option>
+                    <option value="Polish Female">Polish Female</option>
+                    <option value="Polish Male">Polish Male</option>
+                    <option value="Portuguese Female">Portuguese Female</option>
+                    <option value="Portuguese Male">Portuguese Male</option>
+                    <option value="Romanian Female">Romanian Female</option>
+                    <option value="Russian Female">Russian Female</option>
+                    <option value="Sinhala">Sinhala</option>
+                    <option value="Slovak Female">Slovak Female</option>
+                    <option value="Spanish Female">Spanish Female</option>
+                    <option value="Spanish Latin American Female">Spanish Latin American Female</option>
+                    <option value="Spanish Latin American Male">Spanish Latin American Male</option>
+                    <option value="Swedish Female">Swedish Female</option>
+                    <option value="Swedish Male">Swedish Male</option>
+                    <option value="Tamil Female">Tamil Female</option>
+                    <option value="Tamil Male">Tamil Male</option>
+                    <option value="Thai Female">Thai Female</option>
+                    <option value="Thai Male">Thai Male</option>
+                    <option value="Turkish Female">Turkish Female</option>
+                    <option value="Turkish Male">Turkish Male</option>
+                    <option value="Ukrainian Female">Ukrainian Female</option>
+                    <option value="Vietnamese Female">Vietnamese Female</option>
+                    <option value="Vietnamese Male">Vietnamese Male</option>
+                    <option value="Afrikaans Male">Afrikaans Male</option>
+                    <option value="Albanian Male">Albanian Male</option>
+                    <option value="Bosnian Male">Bosnian Male</option>
+                    <option value="Catalan Male">Catalan Male</option>
+                    <option value="Croatian Male">Croatian Male</option>
+                    <option value="Esperanto Male">Esperanto Male</option>
+                    <option value="Icelandic Female">Icelandic Female</option>
+                    <option value="Latvian Male">Latvian Male</option>
+                    <option value="Macedonian Male">Macedonian Male</option>
+                    <option value="Moldavian Female">Moldavian Female</option>
+                    <option value="Montenegrin Male">Montenegrin Male</option>
+                    <option value="Serbian Male">Serbian Male</option>
+                    <option value="Serbo-Croatian Male">Serbo-Croatian Male</option>
+                    <option value="Swahili Male">Swahili Male</option>
+                    <option value="Welsh Male">Welsh Male</option>
+                    <option value="Fallback UK Female">Fallback UK Female</option>
+                    <option value="UK English Female">UK English Female</option>
+                    <option value="UK English Male">UK English Male</option>
+                    <option value="US English Female">US English Female</option>
+                    <option value="US English Male">US English Male</option>
+                    <option value="Arabic Male">Arabic Male</option>
+                    <option value="Arabic Female">Arabic Female</option>
+                    <option value="Armenian Male">Armenian Male</option>
+                    <option value="Australian Female">Australian Female</option>
+                    <option value="Australian Male">Australian Male</option>
+                    <option value="Bangla Bangladesh Female">Bangla Bangladesh Female</option>
+                    <option value="Bangla Bangladesh Male">Bangla Bangladesh Male</option>
+                    <option value="Bangla India Female">Bangla India Female</option>
+                    <option value="Bangla India Male">Bangla India Male</option>
+                    <option value="Brazilian Portuguese Female">Brazilian Portuguese Female</option>
+                    <option value="Chinese Female">Chinese Female</option>
+                    <option value="Chinese Male">Chinese Male</option>
+                    <option value="Chinese (Hong Kong) Female">Chinese (Hong Kong) Female</option>
+                    <option value="Chinese (Hong Kong) Male">Chinese (Hong Kong) Male</option>
+                    <option value="Chinese Taiwan Female">Chinese Taiwan Female</option>
+                    <option value="Chinese Taiwan Male">Chinese Taiwan Male</option>
+                    <option value="Czech Female">Czech Female</option>
+                    <option value="Danish Female">Danish Female</option>
+                    <option value="Deutsch Female">Deutsch Female</option>
+                    <option value="Deutsch Male">Deutsch Male</option>
+                    <option value="Dutch Female">Dutch Female</option>
+                    <option value="Dutch Male">Dutch Male</option>
+                    <option value="Estonian Male">Estonian Male</option>
+                    <option value="Filipino Female">Filipino Female</option>
+                    <option value="Finnish Female">Finnish Female</option>
+                    <option value="French Female">French Female</option>
+                    <option value="French Male">French Male</option>
+                    <option value="French Canadian Female">French Canadian Female</option>
+                    <option value="French Canadian Male">French Canadian Male</option>
+                    <option value="Greek Female">Greek Female</option>
+                    <option value="Hindi Female">Hindi Female</option>
+                    <option value="Hindi Male">Hindi Male</option>
+                    <option value="Hungarian Female">Hungarian Female</option>
+                    <option value="Indonesian Female">Indonesian Female</option>
+                    <option value="Indonesian Male">Indonesian Male</option>
+                    <option value="Italian Female">Italian Female</option>
+                    <option value="Italian Male">Italian Male</option>
+                    <option value="Japanese Female">Japanese Female</option>
+                    <option value="Japanese Male">Japanese Male</option>
+                    <option value="Korean Female">Korean Female</option>
+                    <option value="Korean Male">Korean Male</option>
+                    <option value="Latin Male">Latin Male</option>
+                    <option value="Nepali">Nepali</option>
+                    <option value="Norwegian Female">Norwegian Female</option>
+                    <option value="Norwegian Male">Norwegian Male</option>
+                    <option value="Polish Female">Polish Female</option>
+                    <option value="Polish Male">Polish Male</option>
+                    <option value="Portuguese Female">Portuguese Female</option>
+                    <option value="Portuguese Male">Portuguese Male</option>
+                    <option value="Romanian Female">Romanian Female</option>
+                    <option value="Russian Female">Russian Female</option>
+                    <option value="Sinhala">Sinhala</option>
+                    <option value="Slovak Female">Slovak Female</option>
+                    <option value="Spanish Female">Spanish Female</option>
+                    <option value="Spanish Latin American Female">Spanish Latin American Female</option>
+                    <option value="Spanish Latin American Male">Spanish Latin American Male</option>
+                    <option value="Swedish Female">Swedish Female</option>
+                    <option value="Swedish Male">Swedish Male</option>
+                    <option value="Tamil Female">Tamil Female</option>
+                    <option value="Tamil Male">Tamil Male</option>
+                    <option value="Thai Female">Thai Female</option>
+                    <option value="Thai Male">Thai Male</option>
+                    <option value="Turkish Female">Turkish Female</option>
+                    <option value="Turkish Male">Turkish Male</option>
+                    <option value="Ukrainian Female">Ukrainian Female</option>
+                    <option value="Vietnamese Female">Vietnamese Female</option>
+                    <option value="Vietnamese Male">Vietnamese Male</option>
+                    <option value="Afrikaans Male">Afrikaans Male</option>
+                    <option value="Albanian Male">Albanian Male</option>
+                    <option value="Bosnian Male">Bosnian Male</option>
+                    <option value="Catalan Male">Catalan Male</option>
+                    <option value="Croatian Male">Croatian Male</option>
+                    <option value="Esperanto Male">Esperanto Male</option>
+                    <option value="Icelandic Female">Icelandic Female</option>
+                    <option value="Latvian Male">Latvian Male</option>
+                    <option value="Macedonian Male">Macedonian Male</option>
+                    <option value="Moldavian Female">Moldavian Female</option>
+                    <option value="Montenegrin Male">Montenegrin Male</option>
+                    <option value="Serbian Male">Serbian Male</option>
+                    <option value="Serbo-Croatian Male">Serbo-Croatian Male</option>
+                    <option value="Swahili Male">Swahili Male</option>
+                    <option value="Welsh Male">Welsh Male</option>
+                    <option value="Fallback UK Female">Fallback UK Female</option>
+                  </select>
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <div class="relative">
+                  <label for="text" class="leading-7 text-sm text-gray-400" onclick='responsiveVoice.speak("Text", "US English Male");'>Text</label>
+                  <textarea onfocus='responsiveVoice.speak("Enter your text", "US English Male");' id="text" name="text" class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" placeholder="Enter your text"></textarea>
+                </div>
+              </div>
+              <div class="p-2 w-100 buttons">
+                <button id="start" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Start</button>
+                <button id="pause" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Pause</button>
+                <button id="resume" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Resume</button>
+                <button id="stop" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Stop</button>
+                <button id="clear" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Clear</button>
+              </div>
+              <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
+                <a class="text-indigo-400">example@email.com</a>
+                <p class="leading-normal my-5">49 Smith St.
+                  <br>Saint Cloud, MN 56301
+                </p>
+                <span class="inline-flex">
+                  <a class="text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <!-- JavaScripts -->
+    <script src="js/responsivevoice.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
